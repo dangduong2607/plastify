@@ -67,7 +67,7 @@
       transform: rotate(0deg) scale(1.02);
     }
 
-    /* HEADER with SBW instead of SAF */
+    /* HEADER with SBW (fixed) */
     .masthead {
       background: #ffd1dc;
       border: 6px dashed #1e4a3a;
@@ -253,7 +253,6 @@
       transform: rotate(0deg) scale(1.02);
       box-shadow: 15px 15px 0 #00ffaa;
     }
-    /* optional container to ensure consistent spacing */
     .poster-item {
       text-align: center;
       margin-bottom: 1rem;
@@ -340,15 +339,13 @@
       text-align: center;
     }
 
-    /* mobile adjustments: ensure posters look good */
+    /* mobile adjustments */
     @media (max-width: 600px) {
       h1 { font-size: 3.5rem; }
       .byline { font-size: 1.2rem; }
       .section-title { font-size: 2.2rem; }
       .step-giant { font-size: 1.2rem; flex-wrap: wrap; }
       .step-number { width: 2.8rem; height: 2.8rem; font-size: 1.8rem; }
-      
-      /* optional: slightly smaller poster border on mobile */
       .poster-img {
         border-width: 5px;
         box-shadow: 12px 12px 0 #ff44cc, 0 0 0 3px #ffee00;
@@ -359,10 +356,10 @@
 <body>
   <div class="container">
 
-    <!-- HEADER: now SBW instead of SAF -->
+    <!-- HEADER: now correctly says SBW X PLASTIFY (no SAF) -->
     <div class="masthead">
       <div class="supertag">
-        <span>🇸🇬 SBW X PLASTIFY</span>   <!-- updated from SAF to SBW -->
+        <span>🇸🇬 SBW X PLASTIFY</span>   <!-- ✅ FIXED: SAF removed, now SBW -->
         <i>♻️ BOTTLE CAP REBELS</i>
         <img class="plastify-logo-img" src="https://static1.squarespace.com/static/65ad0068d6442638fa631393/t/65ad12a5d9231814f41150fb/1705841317483/Black+background+%281%29.png?format=1500w" alt="Plastify" onerror="this.style.display='none';">
         <img class="nsf-logo-img" src="https://i.imgur.com/s7tzmpI.png" alt="NSF Council" onerror="this.style.display='none';">
@@ -439,16 +436,14 @@
       </div>
     </div>
 
-    <!-- OFFICIAL POSTERS (with fixed aspect ratio on mobile) -->
+    <!-- OFFICIAL POSTERS -->
     <div class="wild-card">
       <h2 class="section-title"><i class="fas fa-poster"></i> 📢 OFFICIAL POSTERS</h2>
       <div class="grid-wild" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        <!-- Poster 1: From Caps to Crafts -->
         <div class="poster-item">
           <img class="poster-img" src="https://i.imgur.com/VivDMUd.jpeg" alt="Poster: From Caps to Crafts, Donate Bottle Caps" loading="lazy">
           <p style="font-size:1.4rem; font-weight:800; margin-top:1rem; background:white; padding:0.5rem; border-radius:60px; border:3px solid black;">🔥 FROM CAPS TO CRAFTS 🔥</p>
         </div>
-        <!-- Poster 2: Steps to donate -->
         <div class="poster-item">
           <img class="poster-img" src="https://i.imgur.com/ZAeNsqv.jpeg" alt="Poster: Steps to donate hard plastic bottle caps" loading="lazy">
           <p style="font-size:1.4rem; font-weight:800; margin-top:1rem; background:white; padding:0.5rem; border-radius:60px; border:3px solid black;">📋 3 STEP DONATION GUIDE 📋</p>
@@ -467,7 +462,7 @@
       <i class="fas fa-user-check"></i> PRESENTED BY: CPL RYAN · NSF COUNCIL
     </div>
 
-    <!-- FOOTER (SBW hashtag already present) -->
+    <!-- FOOTER -->
     <footer>
       <div><i class="fas fa-recycle"></i> PLASTIFY · EST.2021 · UN ASEAN WINNER 2024</div>
       <div><i class="fas fa-bottle-droplet"></i> ONLY HARD PLASTICS (CAPS, CONTAINERS) — LET'S GO!</div>
