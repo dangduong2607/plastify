@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>From Waste to Wonder · Plastify x FROH</title>
-  <!-- Google Font & Font Awesome -->
+  <title>SAF x Plastify · Tins & crafts</title>
+  <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -18,447 +18,397 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f9fbf9;
+      background-color: #f7faf8;
       color: #1e2e2b;
       line-height: 1.5;
     }
 
+    /* mixed media background: subtle paint spatter + paper texture */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(180, 210, 180, 0.15) 8px, transparent 8px),
+        radial-gradient(circle at 80% 70%, rgba(240, 200, 120, 0.1) 12px, transparent 12px),
+        repeating-linear-gradient(45deg, rgba(200, 220, 200, 0.1) 0px, rgba(200, 220, 200, 0.1) 2px, transparent 2px, transparent 6px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
     .container {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2rem 1.8rem;
     }
 
-    /* header / hero */
-    .campaign-header {
-      background: linear-gradient(135deg, #f0f7f0 0%, #e2efe5 100%);
-      border-radius: 2rem 2rem 2rem 2rem;
-      padding: 2.5rem 2rem;
-      margin-bottom: 3rem;
-      box-shadow: 0 8px 20px rgba(0, 40, 20, 0.06);
-      border: 1px solid rgba(70, 130, 100, 0.15);
+    /* colorful, softer shapes */
+    .shape-blob {
+      position: absolute;
+      background: rgba(180, 220, 180, 0.2);
+      filter: blur(50px);
+      border-radius: 70% 30% 60% 40% / 50% 60% 40% 50%;
+      width: 300px;
+      height: 200px;
+      z-index: -1;
     }
 
-    .supertitle {
-      font-size: 0.9rem;
+    /* header with SAF / Plastify mashup */
+    .campaign-mast {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(4px);
+      border-radius: 3rem 3rem 3rem 3rem;
+      padding: 2.2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      border: 2px solid #d4e8da;
+      box-shadow: 0 15px 30px -10px rgba(50, 80, 60, 0.2);
+      position: relative;
+    }
+
+    .supertag {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
       font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.2rem;
+    }
+    .supertag span {
+      background: #1e4a3a;
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+    }
+    .supertag i {
       color: #2d6a4f;
-      margin-bottom: 0.5rem;
+      background: #e0f0e0;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-style: normal;
     }
 
-    .main-title {
-      font-size: 3.2rem;
-      font-weight: 700;
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
       line-height: 1.1;
-      color: #0f3b2c;
-      margin-bottom: 1rem;
+      color: #143b2e;
+      margin: 0.3rem 0 0.5rem;
     }
-
-    .main-title span {
-      background: #f4b84120;
-      padding: 0 0.4rem;
-      font-style: italic;
-    }
-
-    .collab-line {
+    .byline {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #2b5d48;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: #1b4d3e;
-      margin: 0.5rem 0 0.75rem 0;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-
-    .collab-line i {
-      font-size: 2rem;
-      color: #3b8b6e;
+    .byline .badge {
+      background: #1e4a3a;
+      color: white;
+      padding: 0.3rem 1.5rem;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 600;
     }
-
-    .presented {
-      font-size: 1rem;
-      font-weight: 500;
-      background: rgba(45, 106, 79, 0.1);
+    .presenter {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      background: #e4f0e8;
       display: inline-block;
-      padding: 0.3rem 1.2rem;
-      border-radius: 40px;
-      color: #1e5a45;
-      margin-top: 0.5rem;
+      padding: 0.4rem 2rem;
+      border-radius: 60px;
+      font-weight: 500;
     }
 
-    /* card style */
-    .section-card {
-      background: white;
-      border-radius: 2rem;
-      padding: 2.2rem 2rem;
+    /* card with painterly border */
+    .painter-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(3px);
+      border-radius: 3rem;
+      padding: 2.5rem;
       margin-bottom: 2.5rem;
-      box-shadow: 0 8px 24px rgba(0, 30, 20, 0.04);
-      border: 1px solid #dee9e2;
-      transition: transform 0.1s ease;
+      border: 2px solid #c0ddce;
+      box-shadow: 0 10px 20px -5px rgba(0, 30, 10, 0.1);
+      transition: transform 0.1s;
+      position: relative;
+      overflow: hidden;
+    }
+    .painter-card::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 100% 0%, rgba(255,230,140,0.2) 0%, transparent 50%);
+      pointer-events: none;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 2.3rem;
       font-weight: 700;
       color: #1f4b3a;
-      margin-bottom: 1.8rem;
+      border-left: 12px solid #f4b841;
+      padding-left: 1.3rem;
+      margin-bottom: 2rem;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      border-bottom: 3px solid #b7dac9;
-      padding-bottom: 0.6rem;
+      gap: 0.8rem;
     }
 
-    .section-title i {
-      color: #2d6a4f;
-      font-size: 1.9rem;
-    }
-
-    .grid-2, .grid-3 {
+    .grid-2, .grid-3, .grid-4 {
       display: grid;
-      gap: 1.8rem;
+      gap: 2rem;
     }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
 
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .info-bullet {
+    .info-item {
       display: flex;
-      gap: 1rem;
+      gap: 1.2rem;
       align-items: flex-start;
-      margin-bottom: 1rem;
+      background: #f0f8f2;
+      padding: 1.3rem;
+      border-radius: 1.8rem;
     }
-
-    .info-bullet i {
-      font-size: 1.4rem;
-      color: #35855f;
-      background: #e2f0e8;
-      padding: 0.5rem;
+    .info-icon {
+      font-size: 2rem;
+      background: white;
+      width: 3.2rem;
+      height: 3.2rem;
       border-radius: 50%;
-      min-width: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1f5e41;
+      box-shadow: 0 4px 6px #cce3d6;
+    }
+
+    .tin-spot {
+      background: #e8f1eb;
+      border-radius: 2rem;
+      padding: 2rem;
+      border: 2px dashed #3a8163;
       text-align: center;
     }
 
-    .highlight-box {
-      background: #eef8f2;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      border-left: 5px solid #2d6a4f;
+    /* image styling */
+    .demo-img {
+      width: 100%;
+      border-radius: 2rem;
+      border: 3px solid white;
+      box-shadow: 0 10px 20px rgba(0,30,0,0.1);
+      margin: 1rem 0;
+      object-fit: cover;
+      height: 200px;
+      background: #bcd9cb;
     }
 
-    .step-card {
-      background: #f6fbf8;
-      border-radius: 1.5rem;
-      padding: 1.6rem 1.2rem;
-      text-align: center;
-      border: 1px solid #cbe5d8;
-      box-shadow: 0 4px 8px rgba(0,30,10,0.02);
-    }
-
-    .step-number {
-      background: #2d6a4f;
+    .step-badge {
+      background: #1f5e41;
       color: white;
-      width: 2.8rem;
-      height: 2.8rem;
+      font-weight: 700;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
     }
 
-    .step-card h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .design-credit {
-      font-size: 0.85rem;
-      color: #4b6b5e;
-      background: #deece3;
-      display: inline-block;
-      padding: 0.2rem 1rem;
-      border-radius: 20px;
-      margin-top: 0.5rem;
-    }
-
-    .badge {
-      background: #35855f;
-      color: white;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.2rem 1rem;
-      border-radius: 30px;
-      display: inline-block;
-      margin-right: 0.5rem;
+    .fun-highlight {
+      background: #f9eec1;
+      border-radius: 2rem;
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      border: 2px solid #f4b841;
     }
 
     .quote-block {
-      background: #1e3f33;
-      color: #f0f7e8;
-      border-radius: 2rem;
-      padding: 2.5rem 2rem;
+      background: #173b2e;
+      color: #f3efe0;
+      border-radius: 3rem;
+      padding: 2.8rem 2.2rem;
       text-align: center;
-      margin: 2.5rem 0 2rem;
+      margin: 2rem 0;
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,240,160,0.1) 5%, transparent 30%);
     }
 
     .quote-text {
-      font-size: 1.8rem;
-      font-weight: 500;
-      line-height: 1.3;
-      max-width: 800px;
-      margin: 0 auto 1rem;
-      quotes: "“" "”" "‘" "’";
-    }
-
-    .quote-text::before {
-      content: "“";
-      font-size: 2.5rem;
-      opacity: 0.6;
-    }
-    .quote-text::after {
-      content: "”";
-      font-size: 2.5rem;
-      opacity: 0.6;
-    }
-
-    .quote-author {
-      font-size: 1.2rem;
-      font-weight: 400;
-      opacity: 0.8;
-    }
-
-    .quote-footer {
-      font-style: italic;
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      opacity: 0.7;
-    }
-
-    /* awards footer (inspired by plastify.sg) */
-    .awards-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2.5rem 0 1.5rem;
-    }
-
-    .award-item {
-      background: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: #1b4d3e;
-      border: 1px solid #a8cfbc;
-      box-shadow: 0 2px 6px rgba(0,30,0,0.02);
-    }
-
-    hr {
-      border: none;
-      border-top: 2px dashed #c0ddcf;
-      margin: 2rem 0;
-    }
-
-    .footnote {
-      font-size: 0.9rem;
-      color: #4f6e61;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .label-icon {
-      background: #d0ead9;
-      border-radius: 30px;
-      padding: 0.2rem 0.8rem;
-      font-weight: 500;
-    }
-
-    /* image placeholder style (as per png suggestion) */
-    .img-placeholder {
-      background: #c4ddcf;
-      height: 140px;
-      border-radius: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #255f43;
-      font-weight: 500;
-      border: 2px dashed #3a8163;
-      margin: 1rem 0;
-    }
-
-    .img-placeholder i {
       font-size: 2rem;
-      margin-right: 0.5rem;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
-    @media (max-width: 600px) {
-      .main-title {
-        font-size: 2.4rem;
-      }
-      .collab-line {
-        font-size: 1.2rem;
-        flex-wrap: wrap;
-      }
+    .instagram-mock {
+      background: linear-gradient(145deg, #fdf8f0, #fff);
+      border: 2px solid #ccc;
+      border-radius: 2rem;
+      padding: 1.2rem;
+      display: inline-block;
+    }
+
+    footer {
+      border-top: 2px solid #b7dac9;
+      margin-top: 2rem;
+      padding: 2rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #306b52;
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- HEADER: FROH / Taran Wase to Wonder! / CRAFTS SBW ✖ PLASTIFY / Presented by CPL Ryan -->
-    <div class="campaign-header">
-      <div class="supertitle"><i class="fas fa-recycle" style="margin-right: 0.3rem;"></i> FROH · from waste to wonder</div>
-      <h1 class="main-title">Taran Wase to Wonder!</h1>
-      <div class="collab-line">
-        <span style="background: #2d6a4f; color: white; padding: 0.2rem 1rem; border-radius: 40px;">CRAFTS</span>
-        <span style="font-weight: 700;">SBW</span>
-        <i class="fas fa-times"></i>
-        <span style="background: #000; color: white; padding: 0.2rem 1.2rem; border-radius: 40px;">PLASTIFY</span>
+    <!-- HEADER: FROH + SAF + Plastify -->
+    <div class="campaign-mast">
+      <div class="supertag">
+        <span>🇸🇬 SAF x PLASTIFY</span>
+        <i>♻️ leading Singapore recycling organisation</i>
+        <i>#FROM_WASTE_TO_WONDER</i>
       </div>
-      <div class="presented">
-        <i class="fas fa-user-check"></i> PRESENTED BY: CPL RYAN
+      <h1>FROH <br> Taran Wase to Wonder!</h1>
+      <div class="byline">
+        <span class="badge">CRAFTS SBW ✖ PLASTIFY</span>
+        <span style="font-size: 1.2rem; background: #e0dcaa; padding:0.2rem 1.2rem; border-radius:40px;">♿ Glaze the Plastify Tins</span>
       </div>
+      <div class="presenter"><i class="fas fa-user-check"></i> PRESENTED BY: CPL RYAN · SBW x NSF COUNCIL</div>
     </div>
 
-    <!-- WHY PLASTIFY? (from 2.png) + intro from plastify.sg -->
-    <div class="section-card">
-      <h2 class="section-title"><i class="fas fa-seedling"></i> WHY PLASTIFY?</h2>
-      <!-- short mission from official site -->
-      <p style="font-size: 1.1rem; margin-bottom: 2rem; background: #e7f3ed; padding: 1rem 1.5rem; border-radius: 60px;">
-        <i class="fas fa-leaf" style="color: #2d6a4f;"></i> Singapore’s first‑based environmental organisation — turning plastic waste into reusable goods, workshops & community action. <strong style="color:#1d543d;">Est. 2021</strong>
-      </p>
+    <!-- WHY SBW CHOSE PLASTIFY + PROBLEM (ARMY WASTE) -->
+    <div class="painter-card">
+      <h2 class="section-title"><i class="fas fa-seedling" style="color:#2d6a4f;"></i> WHY PLASTIFY? & THE ARMY'S CHALLENGE</h2>
       <div class="grid-2">
-        <div class="info-bullet">
-          <i class="fas fa-bullseye"></i>
-          <div><strong>Mission-driven</strong> — turning plastic waste into functional, reusable products while building awareness of sustainable materials management.</div>
-        </div>
-        <div class="info-bullet">
-          <i class="fas fa-hands-helping"></i>
-          <div><strong>Bridges the gap</strong> between awareness and action: waste → education → reuse. See plastic as resource, not trash.</div>
-        </div>
-        <div class="info-bullet">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <div><strong>Community engagement</strong> — beyond recycling, Plastify educates and involves people in the full cycle.</div>
-        </div>
-        <div class="info-bullet">
-          <i class="fas fa-trophy"></i>
-          <div><strong>Recognised impact:</strong> UN ASEAN Blue Innovation Winner 2024, MSE EcoFund Grantee 2023/24, TimeOut & Honeycombers awards.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HOW CAN WE HELP? (3.png) -->
-    <div class="section-card">
-      <h2 class="section-title"><i class="fas fa-question-circle"></i> HOW CAN WE HELP?</h2>
-      <div class="grid-2" style="margin-bottom: 1.5rem;">
         <div>
-          <div class="info-bullet"><i class="fas fa-trash-alt"></i> <div><strong>Bins provided</strong> for each cluster to throw unwanted plastics. Use your own trashbags too – remember to <span class="badge">LABEL them!</span> “for plastify only”</div></div>
-          <div class="info-bullet"><i class="fas fa-cog"></i> <div><strong>Hard/sturdy plastics</strong> highly recommended – like plastic bottle caps!</div></div>
-          <div class="info-bullet"><i class="fas fa-users"></i> <div><strong>POCs assigned</strong> as representatives for collection within each cluster during the collab period.</div></div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-trophy"></i></div>
+            <div><strong>Singapore's leading plastic recycler</strong><br>UN ASEAN winner, EcoFund grantee. Turns rigid plastic into furniture, workshop kits, everyday goods.</div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-trash"></i></div>
+            <div><strong>The problem</strong> – Army camps generate tons of plastic waste. We're tackling it by capturing clean hard plastic (bottle caps, containers) before it's lost.</div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <div><strong>Why SBW partnered</strong> – Plastify bridges awareness → action. They show the full cycle: waste → education → reuse. Perfect for camp sustainability.</div>
+          </div>
         </div>
-        <div class="highlight-box">
-          <i class="fas fa-heart" style="color: #c44545; margin-right: 0.5rem;"></i>
-          <strong>Your contributions really help Plastify</strong> — cleaner, greener Singapore! Make every donation count.
-          <!-- image placeholder as per png "Insert Image Here" -->
-          <div class="img-placeholder"><i class="fas fa-image"></i> donation bins / cluster visual</div>
+        <div>
+          <img class="demo-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b5f9?w=600&auto=format" alt="plastic bottles recycling" style="height:220px;">
+          <p style="background: #ffffffaa; padding:0.5rem 1rem; border-radius:60px;"><i class="fas fa-quote-left"></i> “Every month, camps discard enough rigid plastic to fill a company line. Let's change that.”</p>
         </div>
       </div>
-      <p style="margin-top: 0.5rem;"><i class="fas fa-check-circle" style="color:#2d6a4f;"></i> <strong>NOTE:</strong> only hard/ sturdy plastics (like bottle caps) are recommended for donations.</p>
     </div>
 
-    <!-- ADDITIONAL INFO – FROM CAPS TO CRAFTS (4.png) -->
-    <div class="section-card">
-      <h2 class="section-title"><i class="fas fa-paint-brush"></i> FROM CAPS TO CRAFTS</h2>
-      <p style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.2rem;">🍾 DONATE BOTTLE CAPS</p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-        <span class="label-icon"><i class="fas fa-pencil-ruler"></i> Design by Cpl Sheng Yang</span>
-        <span class="label-icon"><i class="fas fa-paint-brush"></i> Design by LCP Naveen</span>
+    <!-- THE TINS – WHERE & HOW (GLAZE / COLLECT) -->
+    <div class="painter-card">
+      <h2 class="section-title"><i class="fas fa-fill-drip"></i> GLAZE THE PLASTIFY TINS</h2>
+      <div class="grid-2">
+        <div class="tin-spot">
+          <i class="fas fa-trash-alt" style="font-size:3rem; color:#1e4a3a;"></i>
+          <h3 style="margin:1rem 0;">What are the tins for?</h3>
+          <p><strong>Collect hard plastics</strong> – bottle caps, sturdy containers, rigid packaging. Plastify transforms them into new products (furniture, workshop materials).</p>
+          <p><span class="step-badge">!</span> <strong style="background:#f4b841; padding:0.2rem 1rem; border-radius:30px;">only hard plastics</strong> (soft plastics go to general waste).</p>
+          <img class="demo-img" src="https://images.unsplash.com/photo-1588872657578-7efd1f3a9f8e?w=600&auto=format" alt="metal tin for collection" style="height:150px;">
+        </div>
+        <div>
+          <div class="fun-highlight">
+            <i class="fas fa-map-pin"></i> <strong>Where to find the tins</strong>
+            <ul style="margin-top:0.8rem; list-style-type:none;">
+              <li><i class="fas fa-utensils"></i> Canteens</li>
+              <li><i class="fas fa-building"></i> Office lobbies / company line</li>
+              <li><i class="fas fa-tent"></i> Bunk common areas</li>
+            </ul>
+          </div>
+          <div style="margin-top:2rem;">
+            <p><i class="fas fa-droplet" style="color:#2a7faa;"></i> <strong>Clean your caps!</strong> Step 1: rinse bottle caps before tossing into tins.</p>
+            <p><i class="fas fa-tag"></i> Look for the <span style="background:#2d6a4f; color:white; padding:0.2rem 0.8rem; border-radius:30px;">PLASTIFY</span> label on each tin.</p>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <!-- 3 steps clean/dispose/drop -->
+    <!-- EVENT: BIRTHDAY CELEBRATION / RALLY + BOOTHS -->
+    <div class="painter-card">
+      <h2 class="section-title"><i class="fas fa-calendar-alt"></i> RALLY · AFTER PARTY & BOOTHS</h2>
       <div class="grid-3">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3><i class="fas fa-soap"></i> CLEAN</h3>
-          <p>Clean plastic bottle caps thoroughly</p>
-          <div class="design-credit"><i class="far fa-star"></i> LCP Naveen</div>
+        <div class="info-item">
+          <i class="fas fa-chalkboard-teacher" style="font-size:2rem; color:#1f5e41;"></i>
+          <div><strong>Plastify talk</strong> – representative shares the mission and shows sample products.</div>
         </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3><i class="fas fa-trash-restore"></i> DISPOSE</h3>
-          <p>Remaining soft plastics at designated bins</p>
+        <div class="info-item">
+          <i class="fas fa-bullhorn" style="font-size:2rem; color:#1f5e41;"></i>
+          <div><strong>NSF council promotes</strong> the Plastify Tins – how to use, where they are.</div>
         </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3><i class="fas fa-hand-holding-heart"></i> DROP</h3>
-          <p>Bottle caps at collection points</p>
+        <div class="info-item">
+          <i class="fas fa-shuttle-van" style="font-size:2rem; color:#1f5e41;"></i>
+          <div><strong>Move to stadium</strong> – two interactive booths: make your own Plastify product & free recycled giveaways.</div>
         </div>
       </div>
+      <!-- booth images (hands-on) -->
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=600&auto=format" style="height:160px; width:auto; flex:1;" alt="workshop crafting">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=600&auto=format" style="height:160px; width:auto; flex:1;" alt="recycling bins">
+      </div>
+    </div>
 
-      <!-- additional bullet points from 4.png -->
-      <div style="margin-top: 2rem; background: #f4fcf7; padding: 1.3rem 1.8rem; border-radius: 2rem;">
-        <ul style="list-style-type: none;">
-          <li><i class="fas fa-check-circle" style="color: #2d6a4f; margin-right: 0.8rem;"></i> DONATE HARD PLASTIC BOTTLE CAPS</li>
-          <li><i class="fas fa-check-circle" style="color: #2d6a4f; margin-right: 0.8rem;"></i> STEP 1 – CLEAN PLASTIC BOTTLE CAPS</li>
-          <li><i class="fas fa-check-circle" style="color: #2d6a4f; margin-right: 0.8rem;"></i> STEP 2 – DISPOSE remaining soft plastic at designated bins</li>
-          <li><i class="fas fa-check-circle" style="color: #2d6a4f; margin-right: 0.8rem;"></i> STEP 3 – DROP bottle caps at collection points</li>
-        </ul>
-        <div style="margin-top: 1rem; padding: 0.8rem; background: white; border-radius: 60px;">
-          <i class="fas fa-scroll" style="margin-right: 0.5rem;"></i> <strong>POSTERS</strong> will be distributed for POCs to label their allocated Plastify collection spots!
+    <!-- STEPS & CONDITIONS (from original PNGs) -->
+    <div class="painter-card">
+      <h2 class="section-title"><i class="fas fa-bottle-water"></i> FROM CAPS TO CRAFTS · 3 EASY STEPS</h2>
+      <div class="grid-3">
+        <div><span class="step-badge">1</span> <strong>CLEAN</strong> – rinse bottle caps (design by LCP Naveen)</div>
+        <div><span class="step-badge">2</span> <strong>DISPOSE</strong> soft plastics separately in general bins</div>
+        <div><span class="step-badge">3</span> <strong>DROP</strong> hard caps into PLASTIFY tins (collection points)</div>
+      </div>
+      <div style="background: #fff3d6; border-radius: 2rem; padding:1.5rem; margin-top:2rem;">
+        <i class="fas fa-paint-brush"></i> <strong>Design by Cpl Sheng Yang & LCP Naveen</strong> – posters & collection spot labels. POCs will receive posters to mark their cluster collection points.
+      </div>
+    </div>
+
+    <!-- CLUSTER REPS / DELIVERABLES -->
+    <div class="painter-card">
+      <h2 class="section-title"><i class="fas fa-users"></i> CLUSTER REPS & DELIVERABLES</h2>
+      <div class="grid-4">
+        <div><i class="fas fa-user-tie"></i> Contact each cluster → choose Plastify rep (POC)</div>
+        <div><i class="fas fa-paint-roller"></i> Plastify poster (distributed to POCs)</div>
+        <div><i class="fas fa-trash-alt"></i> Plastify bin / tin placed at canteens/offices</div>
+        <div><i class="fas fa-file-powerpoint"></i> Plastify slides for briefings</div>
+        <div><i class="fas fa-instagram"></i> Instagram post (see mockup below)</div>
+        <div><i class="fas fa-recycle"></i> Promote initiative to clusters – serious call to action + DIY aesthetic</div>
+      </div>
+
+      <!-- Instagram post mock-up -->
+      <div class="instagram-mock" style="margin-top:2rem;">
+        <i class="fab fa-instagram" style="font-size:2rem; color:#d62976;"></i> <strong>@sbw.plastify</strong>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin:1rem 0;">
+          <span style="background:#f4b841; padding:0.2rem 1rem; border-radius:30px;">#Recycle</span>
+          <span style="background:#b0dbc0; padding:0.2rem 1rem; border-radius:30px;">#ArtsAndCrafts</span>
+          <span style="background:#fbc4c4; padding:0.2rem 1rem; border-radius:30px;">#FunShapes</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+          <img class="demo-img" src="https://images.unsplash.com/photo-1528323273322-d81458248d40?w=150&auto=format" style="width:80px; height:80px; border-radius:20px;">
+          <p><strong>Glaze the Plastify Tins!</strong> Collect hard plastic, win a recycled notebook. Find tins at canteens. ♻️✨ #SAFgoesGreen</p>
         </div>
       </div>
     </div>
 
-    <!-- VAN GOGH QUOTE (5.png) + funny line -->
+    <!-- VAN GOGH QUOTE (from png) -->
     <div class="quote-block">
       <div class="quote-text">GREAT THINGS ARE NOT DONE BY IMPULSE, BUT BY A SERIES OF SMALL THINGS BROUGHT TOGETHER</div>
-      <div class="quote-author">— VINCENT VAN GOGH</div>
-      <div class="quote-footer">yes i actually said that, trust.</div>
+      <div style="margin-top:1rem;">— VINCENT VAN GOGH <span style="opacity:0.6;">(yes i actually said that, trust.)</span></div>
     </div>
 
-    <!-- Plastify recognitions (from website) & closing -->
-    <div style="text-align: center; margin: 2rem 0 1.5rem;">
-      <h3 style="font-weight: 500; color: #265a44;">♻️ building singapore’s plastic recycling culture</h3>
-      <div class="awards-row">
-        <span class="award-item"><i class="fas fa-united-nations"></i> UN ASEAN Blue Innovation 2024</span>
-        <span class="award-item"><i class="fas fa-award"></i> MSE EcoFund Grantee 2023/24</span>
-        <span class="award-item"><i class="fas fa-clock"></i> TimeOut Recommends 2023/24</span>
-        <span class="award-item"><i class="fas fa-seedling"></i> Honeycombers Best Impact 2024</span>
-      </div>
-    </div>
+    <!-- FOOTER with awards / additional info -->
+    <footer>
+      <div><i class="fas fa-recycle"></i> Plastify · est.2021 · UN ASEAN winner 2024</div>
+      <div><i class="fas fa-bottle-droplet"></i> Only hard plastics (caps, containers)</div>
+      <div><i class="fas fa-hashtag"></i> #FROH #TaranWaseToWonder #SBWxPlastify</div>
+    </footer>
 
-    <hr>
-
-    <!-- footer with collection points / extra note from image 1 & 4 -->
-    <div class="footnote">
-      <i class="fas fa-map-pin" style="color: #2d6a4f;"></i> Collection points: each cluster (POCs will display posters)  
-      <span style="margin-left: auto;"><i class="fas fa-tag"></i> #CraftsSBW ✖ Plastify</span>
-    </div>
-    <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center;">
-      <div><i class="fas fa-bottle-water"></i> <strong>Hard plastic only</strong> (caps, sturdy containers)</div>
-      <div><i class="fas fa-people-arrows"></i> POCs: representatives from each cluster</div>
-      <div><i class="fas fa-hashtag"></i> FROH: Taran Wase to Wonder</div>
-    </div>
-
-    <!-- tiny note: all content from pngs 1–5, with plastify.sg inspiration -->
-    <p style="text-align: center; margin-top: 2.5rem; font-size: 0.8rem; color: #6b8b7c; border-top: 1px solid #d0e2d6; padding-top: 1.5rem;">
-      <i class="fas fa-recycle"></i> campaign by FROH · in collaboration with Plastify · presented by CPL Ryan · design credits: CPL Sheng Yang, LCP Naveen · inspired by plastify.sg
-    </p>
+    <!-- small note: images from unsplash (representative) -->
+    <p style="font-size:0.75rem; color:#658e7a; text-align:center; margin:1rem 0;">Images sourced from Unsplash (recycling, workshop, tins) for visual reference. Campaign by SBW, presented by CPL Ryan. All information aligned with Plastify.sg and SAF collaboration.</p>
   </div>
 </body>
 </html>
