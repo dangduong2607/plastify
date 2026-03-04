@@ -232,6 +232,21 @@
       margin: 1rem 0;
     }
 
+    /* poster specific style to keep them loud */
+    .poster-img {
+      width: 100%;
+      border-radius: 40px;
+      border: 8px solid black;
+      box-shadow: 20px 20px 0 #ff44cc, 0 0 0 4px #ffee00;
+      transform: rotate(-0.5deg);
+      transition: 0.2s;
+      background: white;
+    }
+    .poster-img:hover {
+      transform: rotate(0deg) scale(1.02);
+      box-shadow: 15px 15px 0 #00ffaa;
+    }
+
     .step-giant {
       display: flex;
       align-items: center;
@@ -340,11 +355,11 @@
         <span class="badge">CRAFTS SBW ✖ PLASTIFY</span>
         <span style="background:#ff66cc; padding:0.3rem 1.2rem; border-radius:40px;">♿ GLAZE THE TINS</span>
       </div>
-      <!-- Ryan is now moved out of header. will appear later -->
+      <!-- Ryan moved down -->
       <p style="font-size:1.8rem; font-family:'Bangers'; margin-top:1rem;">💥 FROH = FROM RUBBISH TO HOPE 💥</p>
     </div>
 
-    <!-- WHY PLASTIFY? + ARMY CHALLENGE (with bottle cap energy) -->
+    <!-- WHY PLASTIFY? + ARMY CHALLENGE -->
     <div class="wild-card">
       <h2 class="section-title"><i class="fas fa-skull-crossbones"></i> WHY PLASTIFY? WE'RE AT WAR WITH WASTE!</h2>
       <div class="grid-wild">
@@ -365,7 +380,7 @@
       <img class="demo-img" src="https://images.squarespace-cdn.com/content/v1/65ad0068d6442638fa631393/e9a22feb-7d04-40b3-8dd6-13ec0a53af6e/1751421182317.jpeg" alt="plastic refining seminar" onerror="this.src='https://images.unsplash.com/photo-1532996122724-e3c354a0b5f9?w=600'">
     </div>
 
-    <!-- TINS SECTION with BOTTLE CAP IMAGE (requested) -->
+    <!-- TINS SECTION with BOTTLE CAP IMAGE -->
     <div class="wild-card">
       <h2 class="section-title"><i class="fas fa-fill-drip"></i> GLAZE THE PLASTIFY TINS — COLLECT CAPS!</h2>
       <div class="grid-wild">
@@ -373,7 +388,7 @@
           <i class="fas fa-trash-can" style="font-size:4rem;"></i>
           <h3 style="font-size:2.5rem; font-family:'Bangers';">WHAT ARE THE TINS FOR?</h3>
           <p style="font-size:1.6rem; font-weight:800;">Collect hard plastics – bottle caps, sturdy containers. Plastify transforms them into new products.</p>
-          <!-- BOTTLE CAP IMAGE LINK INSERTED HERE -->
+          <!-- BOTTLE CAP IMAGE LINK -->
           <img class="bottle-cap-img" src="https://business-waste.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/11/06143832/bottle-tops-header-scaled.jpg" alt="MOUNTAIN OF BOTTLE CAPS" loading="lazy">
           <p style="background:black; color:white; padding:1rem; border-radius:60px; font-size:1.4rem;"><span class="step-number" style="display:inline-flex; margin-right:1rem;">!</span> ONLY HARD PLASTICS – caps, containers, no soft stuff</p>
         </div>
@@ -393,8 +408,6 @@
       </div>
     </div>
 
-    <!-- RALLY + BOOTHS section REMOVED per boss -->
-
     <!-- 3 EASY STEPS — LOUD (Naveen name removed from step 1) -->
     <div class="wild-card">
       <h2 class="section-title"><i class="fas fa-bottle-water"></i> FROM CAPS TO CRAFTS IN 3 STEPS</h2>
@@ -408,7 +421,22 @@
       </div>
     </div>
 
-    <!-- POC SECTION and INSTAGRAM REMOVED per boss -->
+    <!-- NEW SECTION: OFFICIAL POSTERS (your design team's work) -->
+    <div class="wild-card">
+      <h2 class="section-title"><i class="fas fa-poster"></i> 📢 OFFICIAL POSTERS</h2>
+      <div class="grid-wild" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <!-- Poster 1: From Caps to Crafts, Donate Bottle Caps -->
+        <div style="text-align:center;">
+          <img class="poster-img" src="https://drive.google.com/uc?export=view&id=1empc0hFCaejmQcVA3qVUO2l9oLFki5JC" alt="Poster: From Caps to Crafts, Donate Bottle Caps" loading="lazy">
+          <p style="font-size:1.4rem; font-weight:800; margin-top:1rem; background:white; padding:0.5rem; border-radius:60px; border:3px solid black;">🔥 FROM CAPS TO CRAFTS 🔥</p>
+        </div>
+        <!-- Poster 2: Steps to donate hard plastic bottle caps at Plastify bins -->
+        <div style="text-align:center;">
+          <img class="poster-img" src="https://drive.google.com/uc?export=view&id=18FAjc6q2lo9eyzhbWFLWhC3RAAIAM5p7" alt="Poster: Steps to donate hard plastic bottle caps" loading="lazy">
+          <p style="font-size:1.4rem; font-weight:800; margin-top:1rem; background:white; padding:0.5rem; border-radius:60px; border:3px solid black;">📋 3 STEP DONATION GUIDE 📋</p>
+        </div>
+      </div>
+    </div>
 
     <!-- VAN GOGH QUOTE — extra wild -->
     <div class="quote-block">
